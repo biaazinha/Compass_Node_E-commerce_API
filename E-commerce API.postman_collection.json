@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "650d8309-65cd-489f-af80-e34ff6de5173",
+		"name": "E-commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26999288",
+		"_collection_link": "https://martian-firefly-174973.postman.co/workspace/Team-Workspace~6e9a6fa3-2839-4289-83f2-24d9f15fe12c/collection/26999288-650d8309-65cd-489f-af80-e34ff6de5173?action=share&creator=26999288&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/auth/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"susan\",\r\n    \"email\":\"susan@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"john@gmail.com\",\r\n    \"password\":\"secret\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/users/64cd377519233682331d7317"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/users/showMe"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"john\",\"email\":\"john@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/users/updateUser"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"secret\",\r\n    \"oldPassword\":\"secret\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/users/updateUserPassword"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/products/64cd42570c9431fcb3738f5d"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"product number 1\",\r\n      \"price\": 25999,\r\n      \"colors\": [\"#ff0000\", \"#00ff00\", \"#0000ff\"],\r\n      \"company\": \"marcos\",\r\n      \"description\": \"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge\",\r\n      \"category\": \"office\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testing product\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/products/64cd42570c9431fcb3738f5d"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/products/64cd42570c9431fcb3738f5d"
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bianc/OneDrive/Documentos/Compass.UOL/Node.JS/11- E-commerce/public/uploads/couch.jpeg"
+								}
+							]
+						},
+						"url": "http://localhost:5000/api/v1/products/uploadImage"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"64cd5d9031eee4d1b8061768\",\r\n    \"rating\":1,\r\n    \"title\":\"good product\",\r\n    \"comment\":\"very very good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/reviews"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/reviews/64cd52a1a7588196f67b5e78"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/reviews/64cd56f1cfbbbe90ec26377e"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\":1,\r\n    \"title\":\"very good product\",\r\n    \"comment\":\"very very bad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/reviews/64cd5e0331eee4d1b8061773"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tax\": 499,\r\n    \"shippingFee\": 799,\r\n    \"items\": [\r\n      {\r\n        \"name\": \"bed\",\r\n        \"price\": 2699,\r\n        \"image\": \"https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160\",\r\n        \"amount\": 3,\r\n        \"product\": \"64cd5d9031eee4d1b8061768\"\r\n      },\r\n      {\r\n        \"name\": \"chair\",\r\n        \"price\": 2999,\r\n        \"image\": \"https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160\",\r\n        \"amount\": 2,\r\n        \"product\": \"64cd5d9031eee4d1b8061768\"\r\n      }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/orders/64d12ce4c81d3c3b61eb99c4"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentIntentId\":\"SomeRandomId\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/v1/orders/64d12ce4c81d3c3b61eb99c4"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Current User Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/v1/orders/showAllMyOrders"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
